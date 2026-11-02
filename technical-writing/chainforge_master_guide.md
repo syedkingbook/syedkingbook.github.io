@@ -12,15 +12,15 @@ title: "ChainForge Docs as Code Implementation"
 
 ## Table of Contents
 
-[Executive Summary and Core Philosophy](#1-executive-summary--core-philosophy)\
+[Executive Summary and Core Philosophy](#1-executive-summary--core-philosophy)
 
-[Phase 1: Environment Bootstrapping and Git Initialization](#2-phase-1-environment-bootstrapping--git-initialization)\
+[Phase 1: Environment Bootstrapping and Git Initialization](#2-phase-1-environment-bootstrapping--git-initialization)
 
-[Phase 2: MkDocs Material and Navigation Architecture](#3-phase-2-mkdocs-material--navigation-architecture)\
+[Phase 2: MkDocs Material and Navigation Architecture](#3-phase-2-mkdocs-material--navigation-architecture)
 
-[Phase 3: Python SDK Modularization and Design Patterns](#4-phase-3-python-sdk-modularization--design-patterns)\
+[Phase 3: Python SDK Modularization and Design Patterns](#4-phase-3-python-sdk-modularization--design-patterns)
 
-[Phase 4: Dynamic API Reference Integration (mkdocstrings)](#5-phase-4-dynamic-api-reference-integration-mkdocstrings)\
+[Phase 4: Dynamic API Reference Integration (mkdocstrings)](#5-phase-4-dynamic-api-reference-integration-mkdocstrings)
 
 [Phase 5: Verification, Execution and Live-Reload Feedback Loop](#6-phase-5-verification-execution--live-reload-feedback-loop)
 
