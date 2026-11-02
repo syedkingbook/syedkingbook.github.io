@@ -12,22 +12,27 @@ title: "ChainForge Docs as Code Implementation"
 
 ## Table of Contents
 
-[Executive Summary & Core Philosophy](#1-executive-summary--core-philosophy)
-[Phase 1: Environment Bootstrapping & Git Initialization](#2-phase-1-environment-bootstrapping--git-initialization)
-[Phase 2: MkDocs Material & Navigation Architecture](#3-phase-2-mkdocs-material--navigation-architecture)
-[Phase 3: Python SDK Modularization & Design Patterns](#4-phase-3-python-sdk-modularization--design-patterns)
-[Phase 4: Dynamic API Reference Integration (mkdocstrings)](#5-phase-4-dynamic-api-reference-integration-mkdocstrings)
-[Phase 5: Verification, Execution & Live-Reload Feedback Loop](#6-phase-5-verification-execution--live-reload-feedback-loop)
+[Executive Summary and Core Philosophy](#1-executive-summary--core-philosophy)\
+
+[Phase 1: Environment Bootstrapping and Git Initialization](#2-phase-1-environment-bootstrapping--git-initialization)\
+
+[Phase 2: MkDocs Material and Navigation Architecture](#3-phase-2-mkdocs-material--navigation-architecture)\
+
+[Phase 3: Python SDK Modularization and Design Patterns](#4-phase-3-python-sdk-modularization--design-patterns)\
+
+[Phase 4: Dynamic API Reference Integration (mkdocstrings)](#5-phase-4-dynamic-api-reference-integration-mkdocstrings)\
+
+[Phase 5: Verification, Execution and Live-Reload Feedback Loop](#6-phase-5-verification-execution--live-reload-feedback-loop)
 
 ---
 
-## Executive Summary & Core Philosophy
+## Executive Summary and Core Philosophy
 
 Modern developer infrastructure demands absolute synchronization between codebases and documentation. Traditional static workflows (such as exporting static PDFs or manual wiki updates) suffer from chronic version drift. This article provides steps to implement Docs as Code for a Blockchain product ChainForge. The ChainForge Docs as Code pipeline bridges this gap by merging core SDK implementation with automated documentation generation using MkDocs, Material themes, and `mkdocstrings`.
 
 ---
 
-## Phase 1: Environment Bootstrapping & Git Initialization
+## Phase 1: Environment Bootstrapping and Git Initialization
 
 Before authoring documentation, ensure your local development workstation has Python 3.9+ and Git installed. If Git is missing in Windows, deploy it via `winget`:
 
@@ -48,7 +53,7 @@ git init
 
 ---
 
-## Phase 2: MkDocs Material & Navigation Architecture
+## Phase 2: MkDocs Material and Navigation Architecture
 
 To configure the developer portal layout, features, and syntax highlighters, create your `mkdocs.yml` configuration file in the project root:
 
@@ -85,7 +90,7 @@ nav:
 
 ---
 
-## Phase 3: Python SDK Modularization & Design Patterns
+## Phase 3: Python SDK Modularization and Design Patterns
 
 To turn raw scripts into a professional installable package (`chainforge-sdk`), structure your codebase into a dedicated folder with a declarative `pyproject.toml`:
 
@@ -134,7 +139,7 @@ Below is the programmatically injected API reference parsed live from the Python
 
 ---
 
-## Phase 5: Verification, Execution & Live-Reload Feedback Loop
+## Phase 5: Verification, Execution and Live-Reload Feedback Loop
 
 Perform an editable installation of your SDK package so that local code modifications reflect immediately:
 
