@@ -1,13 +1,10 @@
 ---
 layout: default
-title: "ChainForge Docs-as-Code Guide"
+title: "ChainForge Docs as Code Implementation"
 ---
 
-**Syed Haseeb Ahmed**
 
-Bangalore, India  |  syedkrow@gmail.com  |  +91 88614 52859
-
-# ChainForge Docs-as-Code Guide
+# ChainForge Docs as Code Implementation
 
 **Comprehensive Master Reference** | **Version:** 2.0.0 | **Scope:** Full Pipeline & Python SDK Architecture
 
@@ -15,22 +12,22 @@ Bangalore, India  |  syedkrow@gmail.com  |  +91 88614 52859
 
 ## Table of Contents
 
-1. [Executive Summary & Core Philosophy](#1-executive-summary--core-philosophy)
-2. [Phase 1: Environment Bootstrapping & Git Initialization](#2-phase-1-environment-bootstrapping--git-initialization)
-3. [Phase 2: MkDocs Material & Navigation Architecture](#3-phase-2-mkdocs-material--navigation-architecture)
-4. [Phase 3: Python SDK Modularization & Design Patterns](#4-phase-3-python-sdk-modularization--design-patterns)
-5. [Phase 4: Dynamic API Reference Integration (mkdocstrings)](#5-phase-4-dynamic-api-reference-integration-mkdocstrings)
-6. [Phase 5: Verification, Execution & Live-Reload Feedback Loop](#6-phase-5-verification-execution--live-reload-feedback-loop)
+[Executive Summary & Core Philosophy](#1-executive-summary--core-philosophy)
+[Phase 1: Environment Bootstrapping & Git Initialization](#2-phase-1-environment-bootstrapping--git-initialization)
+[Phase 2: MkDocs Material & Navigation Architecture](#3-phase-2-mkdocs-material--navigation-architecture)
+[Phase 3: Python SDK Modularization & Design Patterns](#4-phase-3-python-sdk-modularization--design-patterns)
+[Phase 4: Dynamic API Reference Integration (mkdocstrings)](#5-phase-4-dynamic-api-reference-integration-mkdocstrings)
+[Phase 5: Verification, Execution & Live-Reload Feedback Loop](#6-phase-5-verification-execution--live-reload-feedback-loop)
 
 ---
 
-## 1. Executive Summary & Core Philosophy
+## Executive Summary & Core Philosophy
 
-Modern developer infrastructure demands absolute synchronization between codebases and documentation. Traditional static workflows (such as exporting static PDFs or manual wiki updates) suffer from chronic version drift. The ChainForge Docs-as-Code pipeline bridges this gap by merging core SDK implementation with automated documentation generation using MkDocs, Material themes, and `mkdocstrings`.
+Modern developer infrastructure demands absolute synchronization between codebases and documentation. Traditional static workflows (such as exporting static PDFs or manual wiki updates) suffer from chronic version drift. This article provides steps to implement Docs as Code for a Blockchain product ChainForge. The ChainForge Docs as Code pipeline bridges this gap by merging core SDK implementation with automated documentation generation using MkDocs, Material themes, and `mkdocstrings`.
 
 ---
 
-## 2. Phase 1: Environment Bootstrapping & Git Initialization
+## Phase 1: Environment Bootstrapping & Git Initialization
 
 Before authoring documentation, ensure your local development workstation has Python 3.9+ and Git installed. If Git is missing in Windows, deploy it via `winget`:
 
@@ -51,7 +48,7 @@ git init
 
 ---
 
-## 3. Phase 2: MkDocs Material & Navigation Architecture
+## Phase 2: MkDocs Material & Navigation Architecture
 
 To configure the developer portal layout, features, and syntax highlighters, create your `mkdocs.yml` configuration file in the project root:
 
@@ -88,7 +85,7 @@ nav:
 
 ---
 
-## 4. Phase 3: Python SDK Modularization & Design Patterns
+## Phase 3: Python SDK Modularization & Design Patterns
 
 To turn raw scripts into a professional installable package (`chainforge-sdk`), structure your codebase into a dedicated folder with a declarative `pyproject.toml`:
 
@@ -120,7 +117,7 @@ class DotDict(dict):
 
 ---
 
-## 5. Phase 4: Dynamic API Reference Integration (mkdocstrings)
+## Phase 4: Dynamic API Reference Integration (mkdocstrings)
 
 Instead of maintaining manual API documentation in static PDFs, create `docs/api-reference.md` and inject the live client module directly:
 
@@ -137,7 +134,7 @@ Below is the programmatically injected API reference parsed live from the Python
 
 ---
 
-## 6. Phase 5: Verification, Execution & Live-Reload Feedback Loop
+## Phase 5: Verification, Execution & Live-Reload Feedback Loop
 
 Perform an editable installation of your SDK package so that local code modifications reflect immediately:
 
@@ -156,5 +153,6 @@ python -m mkdocs serve
 
 Navigate to `http://127.0.0.1:8000` in your browser. Any edit made to your Markdown files or Python docstrings will instantly trigger a live reload, completing the closed-loop Docs-as-Code architecture.
 
-Project link:
+## Project link:
+Refer to the following Github link for Docs as Code project demonstration:
 https://github.com/syedkingbook/ChainForge-Docs-as-Code-Python-SDK-Framework
