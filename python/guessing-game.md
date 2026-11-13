@@ -13,30 +13,30 @@ This describes the design from the corrected pseudocode, so it matches the choic
 
 The following pseudocode depicts the program flow:
 
-CONSTANTS
-    LOWER_BOUND   = 1
-    UPPER_BOUND   = 100
-    ATTEMPT_LIMIT = 10
-    Outcomes: INVALID, CORRECT, TOO_HIGH, TOO_LOW
+	CONSTANTS
+		LOWER_BOUND   = 1
+		UPPER_BOUND   = 100
+		ATTEMPT_LIMIT = 10
+		Outcomes: INVALID, CORRECT, TOO_HIGH, TOO_LOW
 
-FUNCTION parse_guess(raw_text)            # was CVI
-    text = raw_text with spaces trimmed from both ends
-    IF text is empty                      RETURN INVALID
-    IF text is not a whole number         RETURN INVALID
-        (an integer, or a decimal with zero fraction like 42.0)
-    value = text as an integer
-    IF value < LOWER_BOUND OR value > UPPER_BOUND   RETURN INVALID
-    RETURN value                          # returns the number itself, no printing
+	FUNCTION parse_guess(raw_text)            # was CVI
+		text = raw_text with spaces trimmed from both ends
+		IF text is empty                      RETURN INVALID
+		IF text is not a whole number         RETURN INVALID
+			(an integer, or a decimal with zero fraction like 42.0)
+		value = text as an integer
+		IF value < LOWER_BOUND OR value > UPPER_BOUND   RETURN INVALID
+		RETURN value                          # returns the number itself, no printing
 
-FUNCTION compare_guess(guess, secret)     # was CIS
-    IF guess == secret    RETURN CORRECT
-    IF guess > secret     RETURN TOO_HIGH
-    RETURN TOO_LOW
+	FUNCTION compare_guess(guess, secret)     # was CIS
+		IF guess == secret    RETURN CORRECT
+		IF guess > secret     RETURN TOO_HIGH
+		RETURN TOO_LOW
 
-FUNCTION play_game()                      # was FR
-    secret        = random whole number from LOWER_BOUND to UPPER_BOUND, inclusive
-    attempts_used = 0
-    won           = FALSE
+	FUNCTION play_game()                      # was FR
+		secret        = random whole number from LOWER_BOUND to UPPER_BOUND, inclusive
+		attempts_used = 0
+		won           = FALSE
 
     WHILE attempts_used < ATTEMPT_LIMIT AND NOT won
         raw_text = ask the player for a guess
@@ -57,11 +57,11 @@ FUNCTION play_game()                      # was FR
     IF NOT won
         print game over and reveal the secret
 
-MAIN
-    TRY
-        play_game()
-    ON Ctrl+C or Ctrl+D
-        print a goodbye message and exit
+	MAIN
+	TRY
+		play_game()
+		ON Ctrl+C or Ctrl+D
+		print a goodbye message and exit
 		
 # Program code link
 Refer to the following link for the Python program code for the game:
